@@ -26,6 +26,12 @@ use/l10n/xkb/switch/alt_shift: use/l10n
 	@$(call set,XKB_SWITCH,grp:alt_shift_toggle)
 	@$(call set,GNOME_KB_SWITCH,<Shift>Alt_L)
 
+use/l10n/simple_ru_RU: use/l10n
+	@$(call add,LOCALES,ru_RU)
+	@$(call set,LOCALE,ru_RU)
+	@$(call add,XKB_KEYMAPS,ru)
+	@$(call set,KEYTABLE,ruwin_alt_sh-UTF-8)
+
 # FIXME: derive from locale by default if possible
 use/l10n/ru_RU: use/l10n/xkb/switch/alt_shift
 	@$(call add,LOCALES,ru_RU)

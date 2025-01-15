@@ -203,9 +203,8 @@ distro/regular-rescue-live: distro/.regular-base +systemd \
 	use/net-eth/networkd-dhcp use/net/networkd/resolved \
 	use/live/repo +wireless \
 	use/syslinux/sdab.cfg use/grub/sdab_bios.cfg \
-	use/atomic-installer
+	use/atomic-installer use/l10n/simple_ru_RU
 	@$(call add,LIVE_LISTS,openssh)
-	@$(call set,LOCALE,ru_RU)
 	@$(call add,LIVE_LISTS,$(call tags,network security))
 
 distro/regular-rescue-netbootxyz: distro/.regular-bare mixin/regular-rescue
