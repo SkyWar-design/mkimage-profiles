@@ -6,12 +6,6 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# Запуск atomic-installer при старте
-if [ -n "$PS1" ]; then
-    echo "Запуск atomic-installer..."
-    atomic-installer install
-fi
-
 # Define user specific aliases and functions.
 alias cp='cp -i'
 alias mv='mv -i'
@@ -26,3 +20,9 @@ alias p='cd -'
 ENV=$HOME/.bashrc
 USERNAME="root"
 export USERNAME ENV
+
+# Запуск atomic-installer при старте
+if [ -n "$PS1" ]; then
+    echo "Запуск atomic-installer..."
+    atomic-installer install
+fi

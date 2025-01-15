@@ -203,7 +203,7 @@ distro/regular-rescue-live: distro/.regular-base +systemd \
 	use/net-eth/networkd-dhcp use/net/networkd/resolved \
 	use/live/repo +wireless \
 	use/syslinux/sdab.cfg use/grub/sdab_bios.cfg \
-	use/atomic-installer
+	use/atomic-installer use/l10n/ru_RU
 	@$(call add,LIVE_LISTS,openssh)
 	@$(call add,LIVE_LISTS,$(call tags,network security))
 
