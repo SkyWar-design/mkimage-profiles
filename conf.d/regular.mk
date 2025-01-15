@@ -197,13 +197,14 @@ distro/regular-rescue: distro/.regular-base mixin/regular-rescue use/rescue/rw \
 #	@$(call add,RESCUE_LISTS,$(call tags,base bench))
 	@$(call add,RESCUE_LISTS,$(call tags,network security))
 
-distro/regular-rescue-live: distro/.regular-base +systemd \
+distro/regular-rescue-live: distro/.regular-base +systemd use/l10n/ru_RU \
 	use/live/rescue/extra use/live/rescue/rw \
 	use/stage2/kms use/hdt use/firmware/full \
 	use/net-eth/networkd-dhcp use/net/networkd/resolved \
 	use/live/repo +wireless \
 	use/syslinux/sdab.cfg use/grub/sdab_bios.cfg \
-	use/atomic-installer use/l10n/default/ru_RU
+	use/atomic-installer
+	@$(call add,LIVE_LISTS,openssh)
 	@$(call add,LIVE_LISTS,$(call tags,network security))
 
 distro/regular-rescue-netbootxyz: distro/.regular-bare mixin/regular-rescue
