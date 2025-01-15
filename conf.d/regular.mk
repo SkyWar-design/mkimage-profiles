@@ -198,7 +198,7 @@ distro/regular-rescue: distro/.regular-base mixin/regular-rescue use/rescue/rw \
 	@$(call add,RESCUE_LISTS,$(call tags,network security))
 
 distro/regular-rescue-live: distro/.regular-base +systemd \
-	use/live/rescue/extra use/live/rescue/rw \
+	use/live/rescue/extra use/live/rescue/rw use/l10n/ru_RU \
 	use/stage2/kms use/hdt use/firmware/full \
 	use/net-eth/networkd-dhcp use/net/networkd/resolved \
 	use/live/repo +wireless \
