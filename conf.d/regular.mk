@@ -202,7 +202,8 @@ distro/regular-rescue-live: distro/.regular-base +systemd \
 	use/stage2/kms use/hdt use/firmware/full \
 	use/net-eth/networkd-dhcp use/net/networkd/resolved \
 	use/live/repo +wireless \
-	use/syslinux/sdab.cfg use/grub/sdab_bios.cfg
+	use/syslinux/sdab.cfg use/grub/sdab_bios.cfg \
+	use/atomic-installer
 	@$(call add,LIVE_LISTS,openssh)
 	@$(call add,LIVE_LISTS,$(call tags,network security))
 
