@@ -23,6 +23,6 @@ export USERNAME ENV
 
 # Запуск atomic-installer при старте
 if [ -n "$PS1" ]; then
-    echo "Запуск atomic-actions..."
-    atomic-actions install
+    echo "Запуск atomic-actions ..."
+    atomic-actions install-system
 fi
